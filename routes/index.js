@@ -10,5 +10,9 @@ router.get('/', function(req, res) {
 
 router.get('/quizes/question', quizController.question);
 router.get('/quizes/answer',   quizController.answer);
+// Routes definition of credits
+router.get('/author', function(req, res) {
+res.render('author', { author: 'Adam Raya', errors: []});
+});
 
 module.exports = router;
